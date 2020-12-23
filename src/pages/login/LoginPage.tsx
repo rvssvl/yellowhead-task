@@ -46,7 +46,8 @@ const LoginPage: React.FC = () => {
     const [serverError, setServerError] = useState<string | null>();
     const {redirectUri} = useRedirectUri();
     const history = useHistory();
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    // TODO: add state to show that request is being processed
 
     const sendDataToServer = async (data: ILoginRequestParams) => {
         try {
@@ -83,7 +84,7 @@ const LoginPage: React.FC = () => {
             password: '',
         },
         validate,
-        onSubmit: async (values) => {
+        onSubmit: async (values: ILoginRequestParams) => {
             setServerError(null);
             await sendDataToServer(values);
         },
