@@ -1,0 +1,23 @@
+.login-form {
+    padding: 24px 18px;
+    width: 100%;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.label {
+    margin-bottom: 4px;
+}
+.input {
+
+}
+.error {
+    color: red;
+}
+.server-error {
+    color: red;
+    font-weight: bold;
+    font-size: large;
+}
